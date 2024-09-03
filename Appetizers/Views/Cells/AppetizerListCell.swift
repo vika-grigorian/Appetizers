@@ -25,7 +25,7 @@ struct AppetizerListCell: View {
                     .foregroundStyle(.secondary)
                     .fontWeight(.semibold)
             }
-            .padding(.leading) // отступ от картинки
+            .padding(.leading) 
         }
     }
 }

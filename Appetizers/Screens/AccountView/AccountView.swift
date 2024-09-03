@@ -9,9 +9,8 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @StateObject var viewModel = AccountViewModel() // создали вместе с AccountViewModel -> перенесли все переменные в Model
+    @StateObject var viewModel = AccountViewModel()
 
-    
     var body: some View {
         NavigationView {
             Form {
@@ -36,16 +35,13 @@ struct AccountView: View {
                     Toggle("Frequent Refills", isOn: $viewModel.user.frequentRefills)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
-                
             }
-                .navigationTitle("😊 Accounts")
+                .navigationTitle("😊 Account")
         }
-        // вызов проверки на наличие данных пользователя
         .onAppear {
             viewModel.retrieveUser()
         }
-        
-        // реакция на то, что добавили ошибки в ViewModel
+
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title, 
                   message: alertItem.message,

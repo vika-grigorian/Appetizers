@@ -6,9 +6,6 @@
 //
 
 
-// Sean use this code in all SwiftUI projects
-
-
 import SwiftUI
 
 struct AlertItem: Identifiable {

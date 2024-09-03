@@ -36,5 +36,5 @@ struct EmptyState: View {
 }
 
 #Preview {
-    EmptyState(imageName: "empty-order", message: "This is our test message. \n This is our test message This is our test message")
+    EmptyState(imageName: "empty-order", message: "This is test message")
 }

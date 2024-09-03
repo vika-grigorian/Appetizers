@@ -23,14 +23,13 @@ struct AppetizerListView: View {
                         }
                 }
                 .navigationTitle("🍟 Appetizer")
-                .disabled(viewModel.isShowingDetail) // выкл скролл, когда есть попап
+                .disabled(viewModel.isShowingDetail)
             }
             .onAppear {
                 viewModel.getAppetizers()
             }
-            .blur(radius: viewModel.isShowingDetail ? 20: 0) // заблюрить фон (есть попап), не блюрить, когда просто список
-            
-            
+            .blur(radius: viewModel.isShowingDetail ? 20: 0)
+        
             if viewModel.isShowingDetail {
                 AppetizerDetailView(appetizer: viewModel.selectedAppetizer!,
                                     isShowingDetail: $viewModel.isShowingDetail)
@@ -44,7 +43,6 @@ struct AppetizerListView: View {
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         }
     }
-
 }
 
 #Preview {

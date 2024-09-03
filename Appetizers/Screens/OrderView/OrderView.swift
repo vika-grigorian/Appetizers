@@ -9,7 +9,6 @@ import SwiftUI
 
 struct OrderView: View {
     
-//    @State private var orderItems = MockData.orderItems - удаляем для подключения реальных данных
     @EnvironmentObject var order: Order
     
     var body: some View {
@@ -21,15 +20,13 @@ struct OrderView: View {
                             ForEach(order.items) { appetizer in
                                 AppetizerListCell(appetizer: appetizer)
                             }
-    //                        .onDelete(perform: { indexSet in
-    //                            orderItems.remove(atOffsets: indexSet)
                             .onDelete(perform: order.deleteItems)
                         }
-                        .listStyle(PlainListStyle()) // дизайн списка
+                        .listStyle(PlainListStyle())
                         
                         Button {
                         } label: {
-                            APButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place Order") //создали переменную в Model.Order totalPrice, которая подсчитывает сумму добавленных товаров в корзину 
+                            APButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place Order")
                         }
                         .padding(.bottom, 25)
                     }
@@ -44,4 +41,5 @@ struct OrderView: View {
 
 #Preview {
     OrderView()
+            .environmentObject(Order())
 }

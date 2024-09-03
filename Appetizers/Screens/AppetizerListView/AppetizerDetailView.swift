@@ -38,12 +38,10 @@ struct AppetizerDetailView: View {
                     
                 }
             }
-            
             Spacer()
             
             Button {
-//                order.items.append(appetizer)  добавление в order
-                order.add(appetizer) // аналог строки выше, но в model.order создали функцию
+                order.add(appetizer)
                 isShowingDetail = false
             } label: {
                 APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
@@ -55,7 +53,6 @@ struct AppetizerDetailView: View {
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
-//            print("dismiss") - отображение в панели
             isShowingDetail = false
         } label: {
             XDismissButton()
@@ -67,7 +64,6 @@ struct AppetizerDetailView: View {
     AppetizerDetailView(appetizer: MockData.sampleAppetizer, 
                         isShowingDetail: .constant(true))
 }
-
 
 struct NutritionInfo: View {
     

@@ -21,7 +21,6 @@
 		0479235E2BECAA3B00216E39 /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479235D2BECAA3B00216E39 /* AppetizerListViewModel.swift */; };
 		047923602BECC8AE00216E39 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479235F2BECC8AE00216E39 /* Alert.swift */; };
 		047923622BECD81A00216E39 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047923612BECD81A00216E39 /* LoadingView.swift */; };
-		047923642BECDA8500216E39 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047923632BECDA8500216E39 /* Color+Ext.swift */; };
 		047923662BEDFB3700216E39 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047923652BEDFB3700216E39 /* RemoteImage.swift */; };
 		047923752BEE402E00216E39 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047923742BEE402E00216E39 /* AppetizerDetailView.swift */; };
 		047923792BF0C5A800216E39 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047923782BF0C5A800216E39 /* APButton.swift */; };
@@ -49,7 +48,6 @@
 		0479235D2BECAA3B00216E39 /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		0479235F2BECC8AE00216E39 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		047923612BECD81A00216E39 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		047923632BECDA8500216E39 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		047923652BEDFB3700216E39 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		047923742BEE402E00216E39 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 		047923782BF0C5A800216E39 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 		0479236D2BEE3E2800216E39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				047923632BECDA8500216E39 /* Color+Ext.swift */,
 				0479237E2BF1E2AB00216E39 /* String+Ext.swift */,
 			);
 			path = Extensions;
@@ -324,7 +321,6 @@
 				047923862BF3607F00216E39 /* Order.swift in Sources */,
 				0479237D2BF1DEE000216E39 /* AccountViewModel.swift in Sources */,
 				0479235E2BECAA3B00216E39 /* AppetizerListViewModel.swift in Sources */,
-				047923642BECDA8500216E39 /* Color+Ext.swift in Sources */,
 				047923522BEB95EB00216E39 /* AccountView.swift in Sources */,
 				047923812BF20BBE00216E39 /* User.swift in Sources */,
 				047923792BF0C5A800216E39 /* APButton.swift in Sources */,

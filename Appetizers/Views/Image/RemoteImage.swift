@@ -26,10 +26,9 @@ struct RemoteImage: View {
     var image: Image?
     
     var body: some View {
-        image?.resizable() ?? Image("food-placeholder").resizable() // если есть картинка, покажи, если нет - поставь плейсхолдер
+        image?.resizable() ?? Image("food-placeholder").resizable()
     }
 }
-
 
 struct AppetizerRemoteImage: View {
     
@@ -37,7 +36,7 @@ struct AppetizerRemoteImage: View {
     let urlString: String
     
     var body: some View {
-        RemoteImage(image: imageLoader.image) // imageLoader.image=nill
+        RemoteImage(image: imageLoader.image)
             .onAppear { imageLoader.load(fromURLString: urlString) }
     }
 }

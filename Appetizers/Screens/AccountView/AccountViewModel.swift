@@ -9,19 +9,9 @@ import SwiftUI
 
 final class AccountViewModel: ObservableObject {
     
-//    создали model -> user -> перенесли все переменные (без @Published) в этот файл, здесь удалили
-//    @Published var firstName = ""
-//    @Published var lastName = ""
-//    @Published var email = ""
-//    @Published var birthDate = Date()
-//    @Published var extraNapkins = false
-//    @Published var frequentRefills = false
-    
-    @AppStorage("user") private var userData: Data? // сохранение данных пользователя 
+    @AppStorage("user") private var userData: Data?
     @Published var user = User()
     @Published var alertItem: AlertItem?
-    
-    
     
     func saveChanges() {
         guard isValidForm else { return }
@@ -43,11 +33,10 @@ final class AccountViewModel: ObservableObject {
         } catch {
             alertItem = AlertContext.invalidUserData
         }
-        
     }
     
     var isValidForm: Bool {
-        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else { // guard проверяет соответствие
+        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty else {
             alertItem = AlertContext.invalidForm
             return false
         }
@@ -56,8 +45,6 @@ final class AccountViewModel: ObservableObject {
             alertItem = AlertContext.invalidEmail
             return false
         }
-                
         return true
     }
-    
 }
